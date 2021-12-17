@@ -13,6 +13,12 @@
     <?php
     //Snack 4
     //Creare un array con 15 numeri casuali, tenendo conto che l'array non dovrà contenere lo stesso numero più di una volta
+
+    $randomNumbers = range(0, 100);
+    shuffle($randomNumbers);
+
+    $randomNumbers = array_slice($randomNumbers , 0,15);
+    print_r($randomNumbers);
     ?>
 
 </body>
