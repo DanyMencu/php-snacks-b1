@@ -21,7 +21,9 @@
 
     echo "<strong> Diviso in paragrafi: </strong> <br>";
     for ($i = 0; $i < count($splitParagraph); $i++) {
-        echo $splitParagraph[$i] . "<br>";
+        if(!empty($splitParagraph[$i])) {
+            echo $splitParagraph[$i] . "." . "<br>";
+        }
     }
     ?>
 
