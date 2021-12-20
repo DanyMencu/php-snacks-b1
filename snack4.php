@@ -21,6 +21,23 @@
     print_r($randomNumbers);
     ?>
 
+    <!--
+        Class version
+    -->
+    <?php
+    $numbers = [];
+
+    while (count($numbers) < 15) {
+        $random = rand(1, 50);
+
+        if (!in_array($random, $numbers)) {
+            $numbers[] = $random;
+        }
+    }
+
+    var_dump($numbers);
+    ?>
+
 </body>
 
 </html>
