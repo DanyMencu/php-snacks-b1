@@ -54,13 +54,14 @@
 
     $postsKeys = array_keys($posts);
 
-    for ($i = 0; $i < count($posts); $i++) {
+    for ($i = 0; $i < count($postsKeys); $i++) {
         echo "<strong>Data: " .$postsKeys[$i] ."</strong>". "<br><br>";
 
-        for ($e = 0; $e < count($posts[$postsKeys[$i]]); $e++) {
-            echo "Title: ".$posts[$postsKeys[$i]][$e]['title']. "<br>"
-            ."Author: ".$posts[$postsKeys[$i]][$e]['author']. "<br>"
-            ."Text: ".$posts[$postsKeys[$i]][$e]['text']
+        $datePosts = $posts[$postsKeys[$i]];
+        for ($j = 0; $j < count($datePosts); $j++) {
+            echo "Title: ".$datePosts[$j]['title']. "<br>"
+            ."Author: ".$datePosts[$j]['author']. "<br>"
+            ."Text: ".$datePosts[$j]['text']
             . "<br><br>";
         }
     }
