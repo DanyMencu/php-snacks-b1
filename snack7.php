@@ -40,7 +40,7 @@
     $studentsKeys = array_keys($studentsList);
 
     for ($i = 0; $i < count($studentsList); $i++) {
-        $average = array_sum($studentsList[$studentsKeys[$i]]['votes']) / count($studentsList[$studentsKeys[$i]]['votes']);
+        $average = round(array_sum($studentsList[$studentsKeys[$i]]['votes']) / count($studentsList[$studentsKeys[$i]]['votes']), 1) ;
         echo "<strong>" . $studentsKeys[$i] . "</strong>" . "<br><br>";
 
         echo "Name: " . $studentsList[$studentsKeys[$i]]['name'] . "<br>"
